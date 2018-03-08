@@ -752,12 +752,85 @@ header .col-xs-1 h2 {
   display: none;
 }
 
-main .col-xs-12 {
-  background: pink;
+main figure {
+  position: relative;
 }
 
-main .col-xs-6 {
-  background: pink;
+main .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  padding: 0;
+}
+
+main .container > *:nth-child(1) {
+  -webkit-box-ordinal-group: 2;
+  -ms-flex-order: 1;
+  order: 1;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -ms-flex-item-align: auto;
+  align-self: auto;
+  width: 50%;
+  margin-right: 4%;
+}
+
+main .container > *:nth-child(2) {
+  -webkit-box-ordinal-group: 3;
+  -ms-flex-order: 2;
+  order: 2;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -ms-flex-item-align: auto;
+  align-self: auto;
+  width: 50%;
+}
+
+main figcaption {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  top: 4%;
+  left: 5%;
+}
+
+main .container .thumbnail figcaption {
+  top: -4%;
+}
+
+main figcaption h3 {
+  margin: 5px 0 5px 0;
+}
+
+main .button {
+  font-family: 'Roboto Slab', sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 0.875rem;
 }
 
 /*# sourceMappingURL=style.css.map */
