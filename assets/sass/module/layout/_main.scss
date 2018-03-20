@@ -6,6 +6,8 @@ main {
 	.container {
 		display: flex;
 		padding: 0;
+
+
 	}
 
 	.products {
@@ -98,18 +100,24 @@ main {
 			justify-content: center;
 
 			.post-by::after {
-				content: "/";
+				content: "\002f";
 				margin: 0 5px 0 5px;
 			}
 
 			.date::after {
-				content: "/";
+				content: "\002f";
 				margin: 0 5px 0 5px;
 			}
 
 			@media (max-width: 768px) {
 				display: none;
 			}
+		}
+	}
+
+	@media (min-width: 992px) {
+		.col-md-12 {
+			display: flex;
 		}
 	}
 
