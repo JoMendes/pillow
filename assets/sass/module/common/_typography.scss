@@ -1,0 +1,4 @@
+body {
+	@include main-font-regular();
+	@include fontsize(14px);
+}

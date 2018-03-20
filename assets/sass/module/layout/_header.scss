@@ -1,0 +1,85 @@
+
+header {
+	h1 {
+		@include main-font-regular(); 
+		@include fontsize(14px);
+		text-align: center;
+	}
+
+	.home_btn {
+		display: block;
+		text-align: center;
+		margin: 5px;
+		background-color: $tlblack;
+		color: $white;
+		@include alt-font-bold();
+		@include fontsize(22px);
+		width: 40px;
+		height: 40px;
+		line-height: 40px;
+		position: relative;
+	}
+
+	.triangle::after {
+		content: "";
+		display: block;
+		width: 0; 
+  		height: 0; 
+  		border-left: 5px solid transparent;
+  		border-right: 5px solid transparent;
+  		border-top: 5px solid #f00;
+		position: absolute;
+  		transform: translateX(333%) translateY(-85%) rotate(-45deg);
+	}
+	.home_btn .logo {
+		@include alt-font-bold();
+		@include fontsize(16px);
+	}
+
+	.menu {
+		@extend .home_btn;
+	}
+
+	.menu .bar {
+		content: "";
+		display: block;
+		margin: 4px auto;
+		width: 22px;
+		height: 3px;
+		background-color: $white;
+	}
+
+	.menu div {
+		padding-top: 7px;
+	}
+
+	.col-xs-12 {
+		display: flex;
+	}
+
+
+	// > CIBLE LES ENFANTS DIRECTS
+	// * CIBLE N'IMPORTE QUEL ENFANT DIRECT
+	.col-xs-12 > *:nth-child(1) {
+		order: 1;
+	}
+
+	.col-xs-12 > *:nth-child(2) {
+		order: 3;
+	}
+
+	.col-xs-12 > *:nth-child(3) {
+		order: 2;
+		padding-top: 70px;
+	}
+
+	.col-xs-1 h1 {
+		display: none;
+	}
+
+	.col-xs-1 h2 {
+		display: none;
+	}
+}
+	
+
