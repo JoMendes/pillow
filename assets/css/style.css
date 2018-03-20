@@ -607,6 +607,106 @@ body {
   font-size: 0.875rem;
 }
 
+body {
+  /**
+ 	* Remove the elements for the screen size chosen
+ 	*/
+  /**
+ 	* Let the elements only for the screen size chosen
+ 	*/
+  /**
+	* Put 4% margin-right
+	*/
+}
+
+@media (max-width: 1200px) {
+  body .hidden-lg {
+    display: none;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  body .hidden-md {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  body .hidden-sm {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  body .hidden-xs {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  body .visible-xs {
+    display: none;
+  }
+}
+
+body .visible-sm {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  body .visible-sm {
+    display: block;
+  }
+}
+
+@media (min-width: 992px) {
+  body .visible-sm {
+    display: none;
+  }
+}
+
+body .visible-md {
+  display: none;
+}
+
+@media (min-width: 992px) {
+  body .visible-md {
+    display: block;
+  }
+}
+
+@media (min-width: 1200px) {
+  body .visible-md {
+    display: none;
+  }
+}
+
+body .visible-lg {
+  display: none;
+}
+
+@media (min-width: 1200px) {
+  body .visible-lg {
+    display: block;
+  }
+}
+
+body .margin-4pc {
+  margin-right: 4%;
+}
+
+body .text-center {
+  text-align: center;
+}
+
+body .uppercase {
+  text-transform: uppercase;
+}
+
+body h3 {
+  text-transform: uppercase;
+}
+
 img {
   width: 100%;
 }
@@ -762,46 +862,40 @@ main .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -ms-flex-line-pack: start;
-  align-content: flex-start;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: flex-start;
   padding: 0;
 }
 
-main .container > *:nth-child(1) {
-  -webkit-box-ordinal-group: 2;
-  -ms-flex-order: 1;
-  order: 1;
-  -webkit-box-flex: 1;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -ms-flex-item-align: auto;
-  align-self: auto;
+main .products .container > *:nth-child(1) {
   width: 50%;
   margin-right: 4%;
 }
 
-main .container > *:nth-child(2) {
-  -webkit-box-ordinal-group: 3;
-  -ms-flex-order: 2;
-  order: 2;
-  -webkit-box-flex: 1;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  -ms-flex-item-align: auto;
-  align-self: auto;
+main .products .container > *:nth-child(2) {
   width: 50%;
+}
+
+@media (min-width: 768px) {
+  main .products .container > *:nth-child(2) {
+    margin-right: 4%;
+  }
+}
+
+main .products .container > *:nth-child(3) {
+  width: 50%;
+}
+
+@media (min-width: 992px) {
+  main .products .container > *:nth-child(3) {
+    margin-right: 4%;
+  }
+}
+
+main .products .container > *:nth-child(4) {
+  width: 50%;
+}
+
+main .products figcaption {
+  position: relative;
 }
 
 main figcaption {
@@ -835,85 +929,85 @@ main .button {
   font-size: 0.875rem;
 }
 
-main .separation {
-  border-top: solid 1px #1c1c1c;
+main .newsletter {
+  overflow: hidden;
 }
 
-@media (min-width: 768px) {
-  main .col-xs-6 {
+main .newsletter form {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  padding-bottom: 14px;
+}
+
+main .newsletter .separation {
+  margin: 50px 0 0 0;
+}
+
+main .separation {
+  border-top: solid 1px #1c1c1c;
+  margin: 15px 0 15px 0;
+}
+
+main .blog h4 {
+  text-align: center;
+}
+
+main .blog .separation {
+  width: 30px;
+  margin: 0 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+main .blog .wp-review {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+main .blog .wp-review .post-by::after {
+  content: "/";
+  margin: 0 5px 0 5px;
+}
+
+main .blog .wp-review .date::after {
+  content: "/";
+  margin: 0 5px 0 5px;
+}
+
+@media (max-width: 768px) {
+  main .blog .wp-review {
     display: none;
   }
-  main .col-sm-4 {
-    display: block;
-  }
+}
+
+footer {
+  overflow: hidden;
 }
 
 footer nav ul {
   padding: 0;
-  margin: 0;
-}
-
-footer p {
-  text-align: center;
+  margin: 10px 0;
 }
 
 footer nav ul li {
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: -webkit-box;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  flex-direction: row;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  -webkit-box-pack: center;
-  justify-content: center;
-  -webkit-align-content: stretch;
-  -ms-flex-line-pack: stretch;
-  align-content: stretch;
-  -webkit-align-items: flex-start;
-  -ms-flex-align: start;
-  -webkit-box-align: start;
-  align-items: flex-start;
+  display: inline-block;
 }
 
-footer nav ul:nth-child(1) {
-  -webkit-box-ordinal-group: 1;
-  -ms-flex-order: 0;
-  order: 0;
-  -webkit-box-flex: 0;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  -ms-flex-item-align: auto;
-  align-self: auto;
+footer nav ul li:nth-child(1) {
+  margin-right: 2%;
 }
 
-footer nav ul:nth-child(2) {
-  -webkit-box-ordinal-group: 3;
-  -ms-flex-order: 2;
-  order: 2;
-  -webkit-box-flex: 0;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  -ms-flex-item-align: auto;
-  align-self: auto;
-}
-
-footer nav ul:nth-child(3) {
-  -webkit-box-ordinal-group: 4;
-  -ms-flex-order: 3;
-  order: 3;
-  -webkit-box-flex: 0;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
-  -ms-flex-item-align: auto;
-  align-self: auto;
+footer nav ul li:nth-child(2) {
+  margin-right: 2%;
 }
 
 /*# sourceMappingURL=style.css.map */

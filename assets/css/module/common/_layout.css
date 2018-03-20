@@ -1,0 +1,25 @@
+body .hidden-xs {
+  display: none; }
+  @media (min-width: 768px) {
+    body .hidden-xs {
+      display: block; } }
+
+@media (min-width: 768px) {
+  body .hidden-sm {
+    display: none; } }
+
+@media (min-width: 992px) {
+  body .hidden-sm {
+    display: block; } }
+
+@media (min-width: 992px) {
+  body .hidden-md {
+    display: none; } }
+
+@media (min-width: 1200px) {
+  body .hidden-md {
+    display: block; } }
+
+@media (min-width: 1200px) {
+  body .hidden-lg {
+    display: block; } }
