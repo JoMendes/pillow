@@ -3,14 +3,45 @@ main {
 		position: relative;
 	}
 
+	.feature {
+		display: flex;
+		justify-content: space-between;
+		margin: 5% 0;
+
+		p {
+			margin: 0
+		}
+
+		a {
+			@include main-font-regular-italic();
+			color: $tlgray;
+			text-decoration: underline;
+		}
+	}
+
+	> *:nth-child(2) {
+		
+
+		a {
+			color: $tlgray;
+		}
+
+		a::after {
+			content: "\20D7";
+			position: absolute;
+			top: 27px;
+			left: 110px;
+			@include fontsize(30px);
+		}
+	}
+
 	.container {
 		display: flex;
 		padding: 0;
-
-
 	}
 
 	.products {
+
 		.container > *:nth-child(1) {
 			width: 50%;
 			margin-right: 4%;
@@ -39,7 +70,9 @@ main {
 		}
 	}
 
-	
+	.lightgrey {
+		color: $tlgray;
+	}
 
 	figcaption {
 		position: absolute;
@@ -56,6 +89,7 @@ main {
 
 	figcaption h3 {
 		margin: 5px 0 5px 0;
+		color: $tgray;
 	}
 
 	.button {
@@ -66,15 +100,27 @@ main {
 	.newsletter {
 		overflow: hidden;
 
-		form {
+		.type-email {
 			position: absolute;
 			left: 50%;
 			transform: translateX(-50%);
-			padding-bottom: 14px; 
+			padding: 10px;
+			border: solid 1px #b3b3b3;
+			color: #b3b3b3;
+		}
+
+		.form-btn {
+			background-image: url(../images/plus.png);
+			background-repeat: no-repeat;
+			background-color: $white;
+			border: none;
+			position: absolute;
+			left: 70%;
+			margin: 16px 0;
 		}
 
 		.separation {
-			margin: 50px 0 0 0;
+			margin: 80px 0 0 0;
 		}
 	}
 
@@ -89,10 +135,10 @@ main {
 		}
 
 		.separation {
-				width: 30px;
-				margin: 0 50%;
-				transform: translateX(-50%);
-			}
+			width: 30px;
+			margin: 0 50%;
+			transform: translateX(-50%);
+		}
 
 		.wp-review {
 			width: 100%;
@@ -118,6 +164,10 @@ main {
 	@media (min-width: 992px) {
 		.col-md-12 {
 			display: flex;
+
+			> *:nth-child(1) {
+				margin-right: 2%;
+			}
 		}
 	}
 

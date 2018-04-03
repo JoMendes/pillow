@@ -869,6 +869,40 @@ main figure {
   position: relative;
 }
 
+main .feature {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin: 5% 0;
+}
+
+main .feature p {
+  margin: 0;
+}
+
+main .feature a {
+  font-family: 'Roboto Slab', sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  color: #727272;
+  text-decoration: underline;
+}
+
+main > *:nth-child(2) a {
+  color: #727272;
+}
+
+main > *:nth-child(2) a::after {
+  content: "\20D7";
+  position: absolute;
+  top: 27px;
+  left: 110px;
+  font-size: 1.875rem;
+}
+
 main .container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -909,6 +943,10 @@ main .products figcaption {
   position: relative;
 }
 
+main .lightgrey {
+  color: #727272;
+}
+
 main figcaption {
   position: absolute;
   display: -webkit-box;
@@ -931,6 +969,7 @@ main .container .thumbnail figcaption {
 
 main figcaption h3 {
   margin: 5px 0 5px 0;
+  color: #3d3d3d;
 }
 
 main .button {
@@ -944,17 +983,29 @@ main .newsletter {
   overflow: hidden;
 }
 
-main .newsletter form {
+main .newsletter .type-email {
   position: absolute;
   left: 50%;
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
-  padding-bottom: 14px;
+  padding: 10px;
+  border: solid 1px #b3b3b3;
+  color: #b3b3b3;
+}
+
+main .newsletter .form-btn {
+  background-image: url(../images/plus.png);
+  background-repeat: no-repeat;
+  background-color: #ffffff;
+  border: none;
+  position: absolute;
+  left: 70%;
+  margin: 16px 0;
 }
 
 main .newsletter .separation {
-  margin: 50px 0 0 0;
+  margin: 80px 0 0 0;
 }
 
 main .separation {
@@ -1005,6 +1056,9 @@ main .blog .wp-review .date::after {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+  }
+  main .col-md-12 > *:nth-child(1) {
+    margin-right: 2%;
   }
 }
 
