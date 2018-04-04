@@ -14,7 +14,7 @@ header {
 		background-color: $tlblack;
 		color: $white;
 		@include alt-font-bold();
-		@include fontsize(22px);
+		@include fontsize(30px);
 		width: 40px;
 		height: 40px;
 		line-height: 40px;
@@ -25,12 +25,12 @@ header {
 		content: "\00a0";
 		display: block;
 		width: 0; 
-  		height: 0; 
-  		border-left: 5px solid transparent;
-  		border-right: 5px solid transparent;
-  		border-top: 5px solid #f00;
+		height: 0; 
+		border-left: 5px solid transparent;
+		border-right: 5px solid transparent;
+		border-top: 5px solid #f00;
 		position: absolute;
-  		transform: translateX(333%) translateY(-85%) rotate(-45deg);
+		transform: translateX(333%) translateY(-85%) rotate(-45deg);
 	}
 	.home_btn .logo {
 		@include alt-font-bold();
@@ -69,6 +69,11 @@ header {
 		order: 3;
 		display: flex;
 		justify-content: flex-end;
+
+		@media (min-width: 992px) {
+			flex-direction: flex-end;
+			align-items: flex-end;
+		}
 	}
 
 	.col-xs-12 > *:nth-child(3) {
@@ -76,13 +81,52 @@ header {
 		padding-top: 70px;
 	}
 
-	.col-xs-1 h1 {
-		display: none;
+	.col-xs-1 {
+		h1 {
+			display: none;
+
+			@media (min-width: 992px) {
+				display: block;
+				@include alt-font-bold;
+				@include fontsize(20px);
+				text-transform: uppercase;
+				position: relative;
+				top: -25%;
+				left: -33%;
+			}
+		}
+
+		h2 {
+			display: none;
+
+			@media (min-width: 992px) {
+				display: block;
+				@include fontsize(10px);
+				position: relative;
+				top: -33%;
+				left: 10.25%;
+				color: #7c7c7c;
+			}
+		}
+
+		h3 {
+			display: none;
+
+			@media (min-width: 992px) {
+				display: block;
+				width: 550px;
+				text-transform: none;
+				@include main-font-regular;
+				color: $tlgray;
+			}
+		}
 	}
 
-	.col-xs-1 h2 {
-		display: none;
+	.col-xs-10 h1 {
+		@media (min-width: 992px) {
+			display: none;
+		}
 	}
 }
-	
+
 
