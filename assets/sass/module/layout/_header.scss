@@ -4,6 +4,7 @@ header {
 	h1 {
 		@include main-font-regular(); 
 		@include fontsize(14px);
+		color: $tlgray;
 		text-align: center;
 	}
 
@@ -91,8 +92,8 @@ header {
 				@include fontsize(20px);
 				text-transform: uppercase;
 				position: relative;
-				top: -25%;
-				left: -33%;
+				top: -22%;
+				left: -35%;
 			}
 		}
 
@@ -103,8 +104,8 @@ header {
 				display: block;
 				@include fontsize(10px);
 				position: relative;
-				top: -33%;
-				left: 10.25%;
+				top: -28%;
+				left: 9.3%;
 				color: #7c7c7c;
 			}
 		}
@@ -114,9 +115,10 @@ header {
 
 			@media (min-width: 992px) {
 				display: block;
-				width: 550px;
+				width: 680px;
 				text-transform: none;
-				@include main-font-regular;
+				@include main-font-regular-serif;
+				@include fontsize(24px);
 				color: $tlgray;
 			}
 		}
