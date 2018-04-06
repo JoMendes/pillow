@@ -20,6 +20,8 @@ header {
 		height: 40px;
 		line-height: 40px;
 		position: relative;
+
+
 	}
 
 	.triangle::after {
@@ -71,7 +73,7 @@ header {
 		display: flex;
 		justify-content: flex-end;
 
-		@media (min-width: 992px) {
+		@media (min-width: 1024px) {
 			flex-direction: flex-end;
 			align-items: flex-end;
 		}
@@ -86,46 +88,49 @@ header {
 		h1 {
 			display: none;
 
-			@media (min-width: 992px) {
+			@media (min-width: 1024px) {
 				display: block;
 				@include alt-font-bold;
 				@include fontsize(20px);
 				text-transform: uppercase;
 				position: relative;
-				top: -22%;
+				top: -26%;
 				left: -35%;
+				margin: 0;
 			}
 		}
 
 		h2 {
 			display: none;
 
-			@media (min-width: 992px) {
+			@media (min-width: 1024px) {
 				display: block;
 				@include fontsize(10px);
 				position: relative;
-				top: -28%;
+				top: -26%;
 				left: 9.3%;
 				color: #7c7c7c;
+				margin: 0;
 			}
 		}
 
 		h3 {
 			display: none;
 
-			@media (min-width: 992px) {
+			@media (min-width: 1024px) {
 				display: block;
-				width: 680px;
+				width: 650px;
 				text-transform: none;
 				@include main-font-regular-serif;
-				@include fontsize(24px);
+				@include fontsize(23px);
 				color: $tlgray;
+				margin: 0;
 			}
 		}
 	}
 
 	.col-xs-10 h1 {
-		@media (min-width: 992px) {
+		@media (min-width: 1024px) {
 			display: none;
 		}
 	}

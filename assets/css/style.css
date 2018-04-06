@@ -626,13 +626,13 @@ body {
   }
 }
 
-@media (min-width: 992px) and (max-width: 1199px) {
+@media (min-width: 1024px) and (max-width: 1199px) {
   body .hidden-md {
     display: none;
   }
 }
 
-@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 768px) and (max-width: 1023px) {
   body .hidden-sm {
     display: none;
   }
@@ -660,7 +660,7 @@ body .visible-sm {
   }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1024px) {
   body .visible-sm {
     display: none;
   }
@@ -670,7 +670,7 @@ body .visible-md {
   display: none;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1024px) {
   body .visible-md {
     display: block;
   }
@@ -851,7 +851,7 @@ header .col-xs-12 > *:nth-child(2) {
   justify-content: flex-end;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1024px) {
   header .col-xs-12 > *:nth-child(2) {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -874,7 +874,7 @@ header .col-xs-1 h1 {
   display: none;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1024px) {
   header .col-xs-1 h1 {
     display: block;
     font-family: 'Raleway', sans-serif;
@@ -882,8 +882,9 @@ header .col-xs-1 h1 {
     font-size: 1.25rem;
     text-transform: uppercase;
     position: relative;
-    top: -22%;
+    top: -26%;
     left: -35%;
+    margin: 0;
   }
 }
 
@@ -891,14 +892,15 @@ header .col-xs-1 h2 {
   display: none;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1024px) {
   header .col-xs-1 h2 {
     display: block;
     font-size: 0.625rem;
     position: relative;
-    top: -28%;
+    top: -26%;
     left: 9.3%;
     color: #7c7c7c;
+    margin: 0;
   }
 }
 
@@ -906,19 +908,20 @@ header .col-xs-1 h3 {
   display: none;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1024px) {
   header .col-xs-1 h3 {
     display: block;
-    width: 680px;
+    width: 650px;
     text-transform: none;
     font-family: 'Roboto Slab', serif;
     font-weight: 400;
-    font-size: 1.5rem;
+    font-size: 1.4375rem;
     color: #727272;
+    margin: 0;
   }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1024px) {
   header .col-xs-10 h1 {
     display: none;
   }
@@ -988,7 +991,7 @@ main .products .container > *:nth-child(3) {
   width: 50%;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1024px) {
   main .products .container > *:nth-child(3) {
     margin-right: 4%;
   }
@@ -998,8 +1001,80 @@ main .products .container > *:nth-child(4) {
   width: 50%;
 }
 
-main .products figcaption {
+main .products div.text-product {
   position: relative;
+}
+
+@media (max-width: 1199px) {
+  main .products figcaption {
+    display: none;
+  }
+}
+
+@media (min-width: 1200px) {
+  main .products figure.effect-oscar .pad {
+    padding: 16% 28%;
+    -webkit-transition: background-color 0.35s;
+    -o-transition: background-color 0.35s;
+    transition: background-color 0.35s;
+    top: 0%;
+    left: 0%;
+    margin: 10% 5%;
+  }
+  main .products figure.effect-oscar .pad::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border: 1px solid #fff;
+    content: '';
+    background-color: #ffffff;
+  }
+  main .products figure.effect-oscar h2 {
+    margin: 20% 0 10px 0;
+    -webkit-transition: -webkit-transform 0.35s;
+    transition: -webkit-transform 0.35s;
+    -o-transition: transform 0.35s;
+    transition: transform 0.35s;
+    transition: transform 0.35s, -webkit-transform 0.35s;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+  main .products figure.effect-oscar .pad::before,
+  main .products figure.effect-oscar p {
+    opacity: 1;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, -webkit-transform 0.35s;
+    -o-transition: opacity 0.35s, transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s, -webkit-transform 0.35s;
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+    text-transform: uppercase;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 400;
+    font-size: 0.75rem;
+  }
+  main .products figure.effect-oscar p {
+    text-align: center;
+    border: solid 1px;
+    width: 100%;
+    padding: 20%;
+    margin: 3% -20%;
+  }
+  main .products figure.effect-oscar:hover h2 {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  main .products figure.effect-oscar:hover .pad::before,
+  main .products figure.effect-oscar:hover p {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
 }
 
 main .lightgrey {
@@ -1121,7 +1196,7 @@ main .blog .wp-review .date::after {
   }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1024px) {
   main .col-md-12 {
     display: -webkit-box;
     display: -ms-flexbox;
