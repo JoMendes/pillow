@@ -209,7 +209,7 @@ main {
 		h4 {
 			text-align: center;
 		}
-
+		
 		.separation {
 			width: 30px;
 			margin: 0 50%;
@@ -237,8 +237,47 @@ main {
 				display: none;
 			}
 		}
-	}
+		
+		.col-lg-12 {
+			@media (min-width: 1200px) {
+				display: flex;
 
+				.separation {
+					margin: 0;
+					transform: none;
+				}
+
+				> *:nth-child(1) h4 {
+					text-align: right;
+				}
+
+				> *:nth-child(2) h4 {
+					text-align: left;
+				}
+
+				> *:nth-child(1) {
+					margin-right: 3%;
+
+					.separation {
+						margin-left: 94.9%;
+					}
+
+					.wp-review {
+						justify-content: flex-end;
+					}
+				}
+
+				> *:nth-child(2) {
+					margin-left: 3%;
+
+					.wp-review {
+						justify-content: flex-start;
+					}
+				}
+			}			
+		}
+	}
+	
 	@media (min-width: 1024px) {
 		.col-md-12 {
 			display: flex;

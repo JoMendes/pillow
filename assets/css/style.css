@@ -1196,6 +1196,45 @@ main .blog .wp-review .date::after {
   }
 }
 
+@media (min-width: 1200px) {
+  main .blog .col-lg-12 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  main .blog .col-lg-12 .separation {
+    margin: 0;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+  }
+  main .blog .col-lg-12 > *:nth-child(1) h4 {
+    text-align: right;
+  }
+  main .blog .col-lg-12 > *:nth-child(2) h4 {
+    text-align: left;
+  }
+  main .blog .col-lg-12 > *:nth-child(1) {
+    margin-right: 3%;
+  }
+  main .blog .col-lg-12 > *:nth-child(1) .separation {
+    margin-left: 94.9%;
+  }
+  main .blog .col-lg-12 > *:nth-child(1) .wp-review {
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+  }
+  main .blog .col-lg-12 > *:nth-child(2) {
+    margin-left: 3%;
+  }
+  main .blog .col-lg-12 > *:nth-child(2) .wp-review {
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+  }
+}
+
 @media (min-width: 1024px) {
   main .col-md-12 {
     display: -webkit-box;
@@ -1214,6 +1253,7 @@ footer {
 footer nav ul {
   padding: 0;
   margin: 10px 0;
+  color: #999999;
 }
 
 footer nav ul li {
@@ -1226,6 +1266,12 @@ footer nav ul li:nth-child(1) {
 
 footer nav ul li:nth-child(2) {
   margin-right: 2%;
+}
+
+@media (min-width: 1200px) {
+  footer br {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

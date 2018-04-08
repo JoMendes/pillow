@@ -5,6 +5,7 @@ footer {
 		ul {
 			padding: 0;
 			margin: 10px 0;
+			color: #999999;
 
 			li {
 				display: inline-block;
@@ -17,6 +18,12 @@ footer {
 			li:nth-child(2) {
 				margin-right: 2%;
 			}
+		}
+	}
+
+	@media (min-width: 1200px) {
+		br {
+			display: none;
 		}
 	}
 }
