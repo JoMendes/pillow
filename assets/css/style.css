@@ -720,7 +720,13 @@ img {
   width: 100%;
 }
 
+.carousel .container {
+  width: 100%;
+  padding: 0;
+}
+
 .carousel figure {
+  display: block;
   position: relative;
 }
 
@@ -769,6 +775,54 @@ img {
   padding: 8px;
   border: solid 1px #1c1c1c;
   background-color: #ffffff;
+}
+
+.carousel .fas, .carousel .fa-arrow-right, .carousel .fa-arrow-left, .carousel .arrow-right, .carousel .arrow-left {
+  display: none;
+}
+
+@media (min-width: 1200px) {
+  .carousel .container {
+    width: 1280px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .carousel {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  .carousel .fas, .carousel .fa-arrow-right, .carousel .fa-arrow-left, .carousel .arrow-right, .carousel .arrow-left {
+    display: block;
+  }
+  .carousel .fa-arrow-right, .carousel .fa-arrow-left {
+    font-size: 1.875rem;
+    position: relative;
+    top: 330px;
+  }
+  .carousel .arrow-left, .carousel .arrow-right {
+    margin: 1%;
+  }
+  .carousel .arrow-left {
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1;
+  }
+  .carousel .container {
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
+    order: 2;
+    margin: 0;
+  }
+  .carousel .arrow-right {
+    -webkit-box-ordinal-group: 4;
+    -ms-flex-order: 3;
+    order: 3;
+  }
 }
 
 header h1 {
@@ -1156,8 +1210,13 @@ main .separation {
   }
 }
 
+main .blog h2 {
+  margin-top: 3%;
+}
+
 main .blog h4 {
   text-align: center;
+  font-size: 1.125rem;
 }
 
 main .blog .separation {
@@ -1208,8 +1267,12 @@ main .blog .wp-review .date::after {
     -ms-transform: none;
     transform: none;
   }
+  main .blog .col-lg-12 h4 {
+    width: 425px;
+  }
   main .blog .col-lg-12 > *:nth-child(1) h4 {
     text-align: right;
+    float: right;
   }
   main .blog .col-lg-12 > *:nth-child(2) h4 {
     text-align: left;
@@ -1219,6 +1282,7 @@ main .blog .wp-review .date::after {
   }
   main .blog .col-lg-12 > *:nth-child(1) .separation {
     margin-left: 94.9%;
+    float: right;
   }
   main .blog .col-lg-12 > *:nth-child(1) .wp-review {
     -webkit-box-pack: end;
@@ -1235,6 +1299,10 @@ main .blog .wp-review .date::after {
   }
 }
 
+main .fas, main .fa-arrow-right, main .fa-arrow-left {
+  display: none;
+}
+
 @media (min-width: 1024px) {
   main .col-md-12 {
     display: -webkit-box;
@@ -1243,6 +1311,25 @@ main .blog .wp-review .date::after {
   }
   main .col-md-12 > *:nth-child(1) {
     margin-right: 2%;
+  }
+}
+
+@media (min-width: 1200px) {
+  main .fas, main .fa-arrow-right, main .fa-arrow-left {
+    display: block;
+  }
+  main .fa-arrow-right {
+    position: relative;
+    bottom: 120px;
+    margin-right: 1%;
+    float: right;
+    font-size: 1.875rem;
+  }
+  main .fa-arrow-left {
+    position: relative;
+    bottom: 120px;
+    margin-left: 1%;
+    font-size: 1.875rem;
   }
 }
 
@@ -1269,7 +1356,7 @@ footer nav ul li:nth-child(2) {
 }
 
 @media (min-width: 1200px) {
-  footer br {
+  footer p > *:nth-child(1) {
     display: none;
   }
 }

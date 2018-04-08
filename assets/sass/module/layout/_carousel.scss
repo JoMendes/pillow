@@ -3,9 +3,15 @@ img {
 }
 
 .carousel {
+	.container {
+		width: 100%;
+		padding: 0;
+	}
+
 	width: 100%;
 
 	figure {
+		display: block;
 		position: relative;
 	}
 
@@ -48,4 +54,46 @@ img {
 		background-color: $white;
 	}
 
+	.fas, .fa-arrow-right, .fa-arrow-left, .arrow-right, .arrow-left {
+		display: none;
+	}
+	
+	@media (min-width: 1200px) {
+		.container {
+			width: 1280px;
+		}
+	}
+
+	@media (min-width: 1400px) {
+
+		display: flex;
+		justify-content: center;
+
+		.fas, .fa-arrow-right, .fa-arrow-left, .arrow-right, .arrow-left {
+			display: block;
+		}
+
+		.fa-arrow-right, .fa-arrow-left {
+			@include fontsize(30px);
+			position: relative;
+			top: 330px;
+		}
+
+		.arrow-left, .arrow-right {
+			margin: 1%;
+		}
+
+		.arrow-left {
+			order: 1;
+		}
+
+		.container {
+			order: 2;
+			margin: 0;
+		}
+
+		.arrow-right {
+			order: 3;
+		}
+	}
 }
