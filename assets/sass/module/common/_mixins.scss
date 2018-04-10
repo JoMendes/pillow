@@ -3,11 +3,6 @@
 ----------------------------------------------------------------*/
 
 @mixin main-font-regular() {
-	font-family: 'Roboto Slab', sans-serif;
-	font-weight: 400;
-}
-
-@mixin main-font-regular-serif() {
 	font-family: 'Roboto Slab', serif;
 	font-weight: 400;
 }
@@ -15,6 +10,11 @@
 @mixin main-font-bold() {
 	font-family: 'Roboto Slab', sans-serif;
 	font-weight: 700;
+}
+
+@mixin main-font-regular-serif() {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
 }
 
 @mixin main-font-regular-italic() {

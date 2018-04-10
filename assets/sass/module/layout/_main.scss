@@ -6,10 +6,11 @@ main {
 	.feature {
 		display: flex;
 		justify-content: space-between;
-		margin: 5% 0;
+		margin: 2% 0;
 
 		p {
-			margin: 0
+			margin: 0;
+			font-weight: 700;
 		}
 
 		a {
@@ -19,14 +20,29 @@ main {
 		}
 	}
 
-	> *:nth-child(2) {
-		
+	.resize-mans {
+		padding-bottom: 48.57%;
+		height: 0;
+		overflow: hidden;
 
-		a {
-			color: $tlgray;
+		img {
+			position: relative;
+			top: -20px;
 		}
 
-		a::after {
+		@media (min-width: 1024px) {
+			overflow: visible;
+
+			img {
+				top: 0;
+			}
+		}
+	}
+
+	> *:nth-child(2) {
+		color: $tlgray;
+
+		.view-collection::after {
 			content: "\20D7";
 			position: absolute;
 			top: 27px;
@@ -67,6 +83,7 @@ main {
 
 		div.text-product {
 			position: relative;
+			margin: 30px 0 70px 0;
 		}
 
 		@media (max-width: 1199px) {
@@ -78,12 +95,15 @@ main {
 		@media (min-width: 1200px) {
 
 			figure.effect-oscar .pad {
-				padding: 16% 28%;
 				-webkit-transition: background-color 0.35s;
 				transition: background-color 0.35s;
-				top: 0%;
-				left: 0%;
-				margin: 10% 5%;
+				top: 20px;
+				left: 20px;
+				width: calc(100% - 40px);
+				height: calc(100% - 40px);
+				display: flex;
+				align-items: center;
+				justify-content: center;
 			}
 
 			figure.effect-oscar .pad::before {
@@ -105,6 +125,10 @@ main {
 				transform: translate3d(0,100%,0);
 			}
 
+			figure .pad a {
+				width: 95px;
+			}
+
 			figure.effect-oscar .pad::before,
 			figure.effect-oscar p {
 				opacity: 1;
@@ -120,9 +144,14 @@ main {
 			figure.effect-oscar p {
 				text-align: center;
 				border: solid 1px;
-				width: 100%;
 				padding: 20%;
 				margin: 3% -20%;
+			}
+
+			figure.effect-oscar p:hover {
+				background: $black;
+				color: $white;
+				transition: opacity(0.3);
 			}
 
 			figure.effect-oscar:hover h2 {
@@ -187,6 +216,7 @@ main {
 			position: absolute;
 			left: 70%;
 			margin: 16px 0;
+			cursor: pointer;
 		}
 
 		.separation {
@@ -213,6 +243,7 @@ main {
 		h4 {
 			text-align: center;
 			@include fontsize(18px);
+			font-weight: 400;
 		}
 		
 		.separation {
@@ -309,18 +340,23 @@ main {
 		}
 
 		.fa-arrow-right {
-		position: relative;
-		bottom: 120px;
-		margin-right: 1%;
-		float: right;
-		@include fontsize(30px);
+			@include fontsize(30px);
+		}
+
+		.arrow-right {
+			position: relative;
+			bottom: 120px;
+			float: right;
 		}
 
 		.fa-arrow-left {
-		position: relative;
-		bottom: 120px;
-		margin-left: 1%;
-		@include fontsize(30px);
+			@include fontsize(30px);
+		}
+
+		.arrow-left {
+			position: relative;
+			bottom: 120px;
+			float: left;
 		}
 	}
 

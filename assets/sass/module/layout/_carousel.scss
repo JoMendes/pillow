@@ -2,7 +2,20 @@ img {
 	width: 100%;
 }
 
+.grow {
+	display: inline-block;
+	vertical-align: middle;
+	transform: perspective(1px) translateZ(0);
+	transition-duration: 0.3s;
+	transition-property: transform;
+}
+
+.grow:hover {
+	transform: scale(1.1);
+}
+
 .carousel {
+
 	.container {
 		width: 100%;
 		padding: 0;
@@ -30,29 +43,59 @@ img {
 		align-items: flex-start;
 		top: 20%;
 		left: 50%;
+
+		h2 {
+			@include fontsize(10px);
+			top: 20%;
+			margin: 0;
+
+		}
+
+		h3 {
+			@include main-font-bold();
+			@include fontsize(14px);
+			margin: 14px 0 14px;
+		}
+
+		.button {
+			@include fontsize(10px);
+			top: 52%;
+			margin-left: auto;
+			padding: 8px;
+			border: solid 1px $black;
+			background-color: $white;
+		}
+
+		@media (min-width: 768px) {
+			top: 54%;
+			left: 53%;
+
+			h2 {
+				@include fontsize(12px);
+			}
+
+			h3 {
+				@include fontsize(25px);
+			}
+
+			.button {
+				margin-left: 0;
+				@include fontsize(12px);
+			}
+		}
+
+		@media (min-width: 1200px) {
+			.button:hover {
+				border: solid 1px $black;
+				background-color: $tgray;
+				color: $white;
+			}
+		}
 	}
 
-	h2 {
-		@include fontsize(10px);
-		top: 20%;
-		margin: 0;
-		
-	}
+	
 
-	h3 {
-		@include main-font-bold();
-		@include fontsize(14px);
-		margin: 14px 0 14px;
-	}
-
-	.button {
-		@include fontsize(10px);
-		top: 52%;
-		margin-left: auto;
-		padding: 8px;
-		border: solid 1px $black;
-		background-color: $white;
-	}
+	
 
 	.fas, .fa-arrow-right, .fa-arrow-left, .arrow-right, .arrow-left {
 		display: none;

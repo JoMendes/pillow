@@ -21,6 +21,10 @@ footer {
 		}
 	}
 
+	p {
+		margin: 3% 0;
+	}
+
 	@media (min-width: 1200px) {
 		p > *:nth-child(1) {
 			display: none;

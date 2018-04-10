@@ -95,7 +95,7 @@ header {
 				text-transform: uppercase;
 				position: relative;
 				top: -26%;
-				left: -35%;
+				left: -35.7%;
 				margin: 0;
 			}
 		}
@@ -119,11 +119,11 @@ header {
 
 			@media (min-width: 1024px) {
 				display: block;
-				width: 650px;
+				width: 745px;
 				text-transform: none;
-				@include main-font-regular-serif;
+				@include main-font-regular;
 				@include fontsize(23px);
-				color: $tlgray;
+				color: $tgray;
 				margin: 0;
 			}
 		}
